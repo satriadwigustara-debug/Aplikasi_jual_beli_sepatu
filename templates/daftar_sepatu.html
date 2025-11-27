@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Daftar Sepatu</h2>
+<div class="grid">
+{% for s in sepatu_list %}
+    <div class="card">
+        <img src="{{ s.gambar }}" alt="{{ s.nama }}">
+        <h3>{{ s.nama }}</h3>
+        <p>Harga: Rp {{ "{:,}".format(s.harga) }}</p>
+        <a href="{{ url_for('edit_sepatu', id=s.id) }}" class="btn">Edit</a>
+        <a href="{{ url_for('hapus_sepatu', id=s.id) }}" class="btn delete" onclick="return confirm('Yakin hapus sepatu ini?')">Hapus</a>
+    </div>
+{% endfor %}
+</div>
+{% endblock %}

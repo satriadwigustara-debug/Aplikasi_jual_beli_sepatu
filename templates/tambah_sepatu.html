@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Tambah Sepatu Baru</h2>
+<form method="POST">
+    <label>Nama Sepatu:</label><br>
+    <input type="text" name="nama" required><br><br>
+
+    <label>Harga:</label><br>
+    <input type="number" name="harga" required><br><br>
+
+    <label>URL Gambar:</label><br>
+    <input type="text" name="gambar" required><br><br>
+
+    <button type="submit">Tambah</button>
+</form>
+{% endblock %}

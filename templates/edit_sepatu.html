@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Edit Sepatu</h2>
+<form method="POST">
+    <label>Nama Sepatu:</label><br>
+    <input type="text" name="nama" value="{{ sepatu.nama }}" required><br><br>
+
+    <label>Harga:</label><br>
+    <input type="number" name="harga" value="{{ sepatu.harga }}" required><br><br>
+
+    <label>URL Gambar:</label><br>
+    <input type="text" name="gambar" value="{{ sepatu.gambar }}" required><br><br>
+
+    <button type="submit">Simpan Perubahan</button>
+</form>
+{% endblock %}
